@@ -18,7 +18,6 @@ async function movieExists(req, res, next) {
 
     if (movie) {
         res.locals.movie = movie;
-        console.log(movie)
         return next();
     } else {
         next({ status: 404, message: "Movie cannot be found." });
